@@ -219,7 +219,7 @@
             bindings = <
                              &kp Q  &kp W                  &kp F            &kp P                    &kp B        &kp J    &kp L                     &kp U             &kp Y                   &kp SEMICOLON
                              &kp A  &mt_shift_left LALT R  &mt_left LGUI S  &mt_shift_left LSHIFT T  &kp G        &kp M    &mt_shift_right LSHIFT N  &mt_right LGUI E  &mt_shift_right LALT I  &kp O
-&mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp D                    &kp V        &kp K    &kp H                     &kp COMMA         &kp DOT                 &kp FSLH       &mt_all RCTRL SQT
+&mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp D                    &kp V        &kp K    &kp H                     &kp COMMA         &kp DOT                 &kp FSLH       &to 0
                                                            &kp BACKSPACE    &lt 1 TILDE              &kp SPACE    &kp TAB  &lt 2 GRAVE               &kp DELETE
             >;
         };
