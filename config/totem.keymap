@@ -199,7 +199,7 @@
             compatible = "zmk,behavior-key-toggle";
             label = "DRAG_TOGGLE";
             #binding-cells = <1>;
-            bindings = <&mkp LCLK>;
+            /* No bindings here; provide keycode parameter when used */
         };
     };
 
@@ -299,7 +299,7 @@
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
         &trans  &trans  &trans  &trans  &trans    &trans     &msc SCRL_UP    &mmv MOVE_DOWN  &msc SCRL_DOWN   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp MCLK  &mkp MB5        &drag_toggle    &mkp MB4         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp MCLK  &mkp MB5        &drag_toggle LCLK  &mkp MB4         &trans  &trans
                         &mo FAST  &sl FAST  &trans    &trans     &mkp LCLK       &mkp RCLK
             >;
         };
@@ -309,7 +309,7 @@
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans     &mmv MOVE_X(-2000)  &mmv MOVE_Y(-2000)  &mmv MOVE_X(2000)  &trans
         &trans  &trans  &trans  &trans  &trans    &trans     &msc SCRL_UP        &mmv MOVE_Y(2000)   &msc SCRL_DOWN     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp MCLK  &mkp MB5            &drag_toggle        &mkp MB4           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp MCLK  &mkp MB5            &drag_toggle LCLK        &mkp MB4           &trans  &trans
                         &mo MOU  &sl MOU  &trans    &trans     &mkp LCLK           &mkp RCLK
             >;
         };
