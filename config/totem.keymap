@@ -194,12 +194,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp ESCAPE>, <&kp F13>;
         };
-
-        drag_toggle: drag_toggle {
-            compatible = "zmk,behavior-key-toggle";
-            label = "DRAG_TOGGLE";
-            #binding-cells = <1>;
-        };
     };
 
     macros {
@@ -266,10 +260,10 @@
         qwerty_layer {
             label = "QWE";
             bindings = <
-                             &trans  &trans                  &kp E            &kp R                    &kp T        &kp Y    &kp U                     &kp I             &kp O                   &kp P
-                             &trans  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &trans    &kp H    &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp SEMICOLON
-&mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp V                    &kp B        &kp N    &kp M                     &trans         &trans                 &trans       &trans
-                                                           &trans    &trans              &trans    &trans  &trans               &trans
+                             &trans  &trans                 &kp E            &kp R                    &kp T     &kp Y   &kp U                     &kp I             &kp O                   &kp P
+                             &trans  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &trans    &kp H   &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp SEMICOLON
+&mt_all LEFT_CONTROL ESCAPE  &kp Z   &kp X                  &kp C            &kp V                    &kp B     &kp N   &kp M                     &trans            &trans                  &trans         &trans
+                                                            &trans           &trans                   &trans    &trans  &trans                    &trans
             >;
         };
 
@@ -296,9 +290,9 @@
         mouse_layer {
             label = "MOU";
             bindings = <
-        &trans  &trans  &trans    &trans    &trans    &trans     &msc SCRL_UP    &mmv MOVE_UP       &msc SCRL_UP     &trans
-        &trans  &trans  &trans    &trans    &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &trans
-&trans  &trans  &trans  &trans    &trans    &trans    &mkp MCLK  &mkp MB5        &drag_toggle LCLK  &mkp MB4         &trans  &trans
+        &trans  &trans  &trans    &trans    &trans    &trans     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_UP     &trans
+        &trans  &trans  &trans    &trans    &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&trans  &trans  &trans  &trans    &trans    &trans    &mkp MCLK  &mkp MB5        &trans          &mkp MB4         &trans  &trans
                         &mo FAST  &sl FAST  &trans    &trans     &mkp LCLK       &mkp RCLK
             >;
         };
@@ -306,12 +300,11 @@
         mouse_fast_layer {
             label = "FAST";
             bindings = <
-        &trans  &trans  &trans   &trans   &trans    &trans      &msc SCRL_UP &mmv MOVE_Y(-2000)  &msc SCRL_DOWN  &trans
-        &trans  &trans  &trans   &trans   &trans    &trans     &mmv MOVE_X(-2000)        &mmv MOVE_Y(2000)    &mmv MOVE_X(2000)    &trans
-&trans  &trans  &trans  &trans   &trans   &trans    &mkp MCLK  &mkp MB5            &drag_toggle LCLK   &mkp MB4           &trans  &trans
+        &trans  &trans  &trans   &trans   &trans    &trans     &msc SCRL_UP        &mmv MOVE_Y(-2000)  &msc SCRL_DOWN     &trans
+        &trans  &trans  &trans   &trans   &trans    &trans     &mmv MOVE_X(-2000)  &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)  &trans
+&trans  &trans  &trans  &trans   &trans   &trans    &mkp MCLK  &mkp MB5            &trans              &mkp MB4           &trans  &trans
                         &mo MOU  &sl MOU  &trans    &trans     &mkp LCLK           &mkp RCLK
             >;
         };
     };
 };
-
