@@ -198,7 +198,7 @@
         drag_toggle: drag_toggle {
             compatible = "zmk,behavior-key-toggle";
             label = "DRAG_TOGGLE";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             bindings = <&mkp LCLK>;
         };
     };
