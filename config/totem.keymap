@@ -12,7 +12,6 @@
 #define GAMEPLUS  5
 #define QWE 6
 #define MOU 7
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
@@ -221,9 +220,9 @@
             label = "BASE";
             bindings = <
                              &kp Q  &kp W                  &kp F            &kp P                    &kp B        &kp J    &kp L                     &kp U             &kp Y                   &kp SEMICOLON
-                             &kp A  &mt_shift_left LALT R  &mt_left LGUI S  &mt_shift_left LSHIFT T  &kp G        &kp M    &mt_shift_right LSHIFT N  &mt_right LGUI E  &mt_shift_right LALT I  &kp O
+                             &kp A  &mt_shift_left LALT R  &mt_left LGUI S  &mt_shift_left LSHIFT T  &lt 7 G      &kp M    &mt_shift_right LSHIFT N  &mt_right LGUI E  &mt_shift_right LALT I  &kp O
 &mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp D                    &kp V        &kp K    &kp H                     &kp COMMA         &kp DOT                 &kp FSLH       &mt_all RCTRL SQT
-                                                           &kp BACKSPACE    &lt 1 TILDE              &kp SPACE    &kp TAB  &lt 2 GRAVE               &lt 7 DELETE
+                                                           &kp BACKSPACE    &lt 1 TILDE              &kp SPACE    &kp TAB  &lt 2 GRAVE               &kp DELETE
             >;
         };
 
@@ -290,10 +289,10 @@
         mouse_layer {
             label = "MOU";
             bindings = <
-                &trans &trans &trans &trans &trans   &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP &msc SCRL_DOWN
-                &trans &trans &trans &trans &trans   &mkp LCLK      &mkp RCLK    &mkp MCLK      &trans        &trans
-                &trans &trans &trans &trans &trans &trans  &mmv MOVE_DOWN &msc SCRL_DOWN &mkp LCLK &mkp RCLK &mkp MCLK &trans
-                                    &trans        &trans        &trans          &trans      &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &msc SCRL_UP  &msc SCRL_DOWN
+        &trans  &trans  &trans  &trans  &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN  &msc SCRL_DOWN  &mkp LCLK        &mkp RCLK     &mkp MCLK       &trans
+                        &trans  &trans  &trans    &trans          &trans          &trans
             >;
         };
     };
