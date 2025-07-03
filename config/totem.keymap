@@ -131,9 +131,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <220>;
+            quick-tap-ms = <100>;
             flavor = "balanced";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             require-prior-idle-ms = <0>;
         };
 
@@ -171,7 +171,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            quick-tap-ms = <220>;
+            quick-tap-ms = <150>;
         };
 
         mt_all: mt_all {
@@ -199,8 +199,6 @@
             compatible = "zmk,behavior-key-toggle";
             label = "DRAG_TOGGLE";
             #binding-cells = <1>;
-
-            /* No bindings here; provide keycode parameter when used */
         };
     };
 
@@ -236,7 +234,7 @@
         };
 
         nav_layer {
-            label = "NAVI";
+            label = "NAV";
             bindings = <
            &kp ESCAPE  &kp UNDER       &kp UP              &kp PLUS         &kp LC(LEFT)    &kp LC(RIGHT)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL
            &trans      &kp LEFT_ARROW  &kp DOWN_ARROW      &kp RIGHT_ARROW  &kp LBKT        &kp RBKT       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
@@ -245,7 +243,7 @@
             >;
         };
 
-        sim_layer {
+        sym_layer {
             label = "SYM";
             bindings = <
         &kp EXCL     &kp AT     &kp HASH   &kp DLLR          &kp PRCNT               &kp CARET     &kp AMPS         &kp ASTERISK  &kp SQT     &kp DQT
@@ -269,9 +267,9 @@
             label = "QWE";
             bindings = <
                              &kp Q  &kp W                  &kp E            &kp R                    &kp T        &kp Y    &kp U                     &kp I             &kp O                   &kp P
-                             &kp A  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &kp G        &kp H    &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp SEMICOLON
-&mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp V                    &kp B        &kp N    &kp M                     &kp COMMA         &kp DOT                 &kp FSLH       &to 0
-                                                           &kp BACKSPACE    &lt 1 TILDE              &kp SPACE    &kp TAB  &lt 2 GRAVE               &lt 7 DELETE
+                             &kp A  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &lt 7 G        &kp H    &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp SEMICOLON
+&mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp V                    &kp B        &kp N    &kp M                     &kp COMMA         &kp DOT                 &kp FSLH       &mt_all RCTRL SQT
+                                                           &kp BACKSPACE    &lt 1 TILDE              &kp SPACE    &kp TAB  &lt 2 GRAVE               &kp DELETE
             >;
         };
 
@@ -286,7 +284,7 @@
         };
 
         gaming_plus_layer {
-            label = "GAME+";
+            label = "GAMEPLUS";
             bindings = <
         &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
         &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &kp F7         &trans  &trans  &kp F12
@@ -306,13 +304,14 @@
         };
 
         mouse_fast_layer {
-            label = "MOUF";
+            label = "FAST";
             bindings = <
-        &trans  &trans  &trans   &trans   &trans    &trans     &mmv MOVE_X(-2000)  &mmv MOVE_Y(-2000)  &mmv MOVE_X(2000)  &trans
-        &trans  &trans  &trans   &trans   &trans    &trans     &msc SCRL_UP        &mmv MOVE_Y(2000)   &msc SCRL_DOWN     &trans
+        &trans  &trans  &trans   &trans   &trans    &trans      &msc SCRL_UP &mmv MOVE_Y(-2000)  &msc SCRL_DOWN  &trans
+        &trans  &trans  &trans   &trans   &trans    &trans     &mmv MOVE_X(-2000)        &mmv MOVE_Y(2000)    &mmv MOVE_X(2000)    &trans
 &trans  &trans  &trans  &trans   &trans   &trans    &mkp MCLK  &mkp MB5            &drag_toggle LCLK   &mkp MB4           &trans  &trans
                         &mo MOU  &sl MOU  &trans    &trans     &mkp LCLK           &mkp RCLK
             >;
         };
     };
 };
+
