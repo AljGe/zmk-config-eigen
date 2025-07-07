@@ -290,20 +290,20 @@
         mouse_layer {
             label = "MOU";
             bindings = <
-        &trans  &trans  &trans    &trans    &trans    &trans     &msc SCRL_UP        &mmv MOVE_Y(-3000)  &msc SCRL_DOWN     &trans
-        &trans  &trans  &trans    &trans    &trans    &trans     &mmv MOVE_X(-3000)  &mmv MOVE_Y(3000)   &mmv MOVE_X(3000)  &trans
-&trans  &trans  &trans  &trans    &trans    &trans    &mkp MCLK  &mkp MB5            &trans              &mkp MB4           &trans  &trans
-                        &mo SLOW  &sl SLOW  &trans    &trans     &mkp LCLK           &mkp RCLK
+        &trans  &trans  &trans  &trans    &trans    &trans     &msc SCRL_UP        &mmv MOVE_Y(-3000)  &msc SCRL_DOWN     &trans
+        &trans  &trans  &trans  &trans    &trans    &trans     &mmv MOVE_X(-3000)  &mmv MOVE_Y(3000)   &mmv MOVE_X(3000)  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &mkp MCLK  &mkp MB5            &trans              &mkp MB4           &trans  &trans
+                        &trans  &mo SLOW  &trans    &trans     &mkp LCLK           &mkp RCLK
             >;
         };
 
         mouse_slow_layer {
             label = "SLOW";
             bindings = <
-        &trans  &trans  &trans   &trans   &trans    &trans     &msc SCRL_UP    &mmv MOVE_UP      &msc SCRL_DOWN   &trans
-        &trans  &trans  &trans   &trans   &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT  &trans
-&trans  &trans  &trans  &trans   &trans   &trans    &mkp MCLK  &mkp MB5        &trans            &mkp MB4         &trans  &trans
-                        &trans   &sl MOU  &trans    &trans     &mkp LCLK       &mkp RCLK
+        &trans  &trans  &trans  &trans  &trans    &trans     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans
+        &trans  &trans  &trans  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp MCLK  &mkp MB5        &trans          &mkp MB4         &trans  &trans
+                        &trans  &trans  &trans    &trans     &mkp LCLK       &mkp RCLK
             >;
         };
     };
