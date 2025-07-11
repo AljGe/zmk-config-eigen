@@ -3,7 +3,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <keys_de.h>
+
+// German keycode definitions for QWERTZ layout
+// When OS is set to German, these physical keys will output the correct German characters
+#define DE_Z Y           // Physical Y key outputs Z in German layout
+#define DE_Y Z           // Physical Z key outputs Y in German layout  
+#define DE_AE SEMI       // Ä - using semicolon position
+#define DE_OE O          // Ö - keeping in O position for simplicity  
+#define DE_UE FSLH       // Ü - using forward slash position
+#define DE_SHARP_S SQT   // ß - using single quote position
 
 #define US 0
 #define DE 1
