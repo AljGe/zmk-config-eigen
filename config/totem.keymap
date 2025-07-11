@@ -23,8 +23,6 @@
 #define QWE 7
 #define MOU 8
 #define SLOW 9
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 &mt {
     quick-tap-ms = <160>;
@@ -190,7 +188,7 @@
         nav_on: nav_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mo 1 &kp F13>;
+            bindings = <&macro_press>, <&mo NAV &kp F13>;
 
             label = "NAV_ON";
         };
@@ -198,7 +196,7 @@
         nav_off: nav_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release>, <&mo 1 &kp F13>;
+            bindings = <&macro_release>, <&mo NAV &kp F13>;
 
             label = "NAV_OFF";
         };
