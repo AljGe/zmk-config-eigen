@@ -61,14 +61,14 @@
             require-prior-idle-ms = <100>;
         };
 
-        russian_letter_ {
+        bracket_right {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <8 9>;
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
 
-        russian_letter_x {
+        bracket_left {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <8 7>;
             require-prior-idle-ms = <100>;
