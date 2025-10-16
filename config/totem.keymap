@@ -93,6 +93,27 @@
             bindings = <&kp RA(P)>;
             key-positions = <17 19>;
         };
+
+        pipe_combo {
+            bindings = <&kp PIPE>;
+            key-positions = <18 19>;
+            timeout-ms = <60>;
+            require-prior-idle-ms = <100>;
+        };
+
+        less_than_combo {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <17 18>;
+            timeout-ms = <60>;
+            require-prior-idle-ms = <100>;
+        };
+
+        greater_than_combo {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <19 20>;
+            timeout-ms = <60>;
+            require-prior-idle-ms = <100>;
+        };
     };
 
     behaviors {
